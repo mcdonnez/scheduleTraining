@@ -1,0 +1,63 @@
+<div ng-show="authenticator.authenticated" id="scheduleForm" class="container">
+  <button class="btn btn-lg btn-primary btn-block" ng-click="authenticator.logout()">Log Out</button>
+  <table id="SST-DateAndTime" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Training Type</th>
+        <th>Instructor</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <select name="Type">
+            <option value=""></option>
+            <option value="360 Advanced">360 Advanced</option>
+            <option value="360 Basics">360 Basics</option>
+            <option value="360 Internal">360 Internal</option>
+            <option value="Administration">Administration</option>
+            <option value="Custom">Custom</option>
+            <option value="Q&amp;A">Q&amp;A</option>
+            <option value="Research Suite API">Research Suite API</option>
+            <option value="Advanced">Research Suite Advanced</option>
+            <option value="Product Basics">Research Suite Basics</option>
+            <option value="Research Suite Internal">Research Suite Internal</option>
+            <option value="Salesforce">Salesforce</option>
+            <option value="Site Intercept Advanced">Site Intercept Advanced</option>
+            <option value="Site Intercept Basics">Site Intercept Basics</option>
+            <option value="Site Intercept Internal">Site Intercept Internal</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" id="InstructorID" value="" class="ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+        </td>
+        <td>
+          <input type="text" id="Date" name="Date" value="" class="hasDatepicker">
+        </td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th align="left">Time</th>
+        <th>Duration (in minutes)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="text" name="Time" value="" maxlength="5" style="width: 50px">
+          <select name="AMPM">
+            <option value="AM">AM</option>
+            <option value="PM" selected="selected">PM</option>
+
+          </select>
+        </td>
+        <td>
+          <input type="number" name="Duration" step="10" min="1" value="60">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

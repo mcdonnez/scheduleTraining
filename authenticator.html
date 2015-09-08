@@ -1,0 +1,8 @@
+<div ng-hide="authenticator.authenticated" id="scheduleLogin" class="container">
+  <a href="#" style="display:none" id="logoutText" target='myIFrame' onclick="myIFrame.location='https://www.google.com/accounts/Logout'; startLogoutPolling();return false;"> Click here to logout </a>
+  <iframe name='myIFrame' id="myIFrame" style='display:none'></iframe>
+  <a class="btn btn-lg btn-primary btn-block" href="{{authenticator._url}}">Sign in</a>
+  <button class="btn btn-lg btn-primary btn-block" ng-click="authenticator.logout()">Logout</button>
+</div>
+<iframe name='myIFrame' id="myIFrame" style='display:none'></iframe>
+<schedule-form></schedule-form>
